@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "d087b91c-43b8-4586-a71c-74b9867871be",
+		"name": "CapableHealth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AWS Lambda (Webhook mockup)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "950701753",
+							"type": "default"
+						},
+						{
+							"key": "action",
+							"value": "scheduled",
+							"type": "default"
+						},
+						{
+							"key": "calendarID",
+							"value": "123",
+							"type": "default"
+						},
+						{
+							"key": "appointmentTypeID",
+							"value": "3456",
+							"type": "default"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gandsaqbh7.execute-api.us-east-1.amazonaws.com/dev/capablehealthservice",
+					"protocol": "https",
+					"host": [
+						"gandsaqbh7",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"capablehealthservice"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

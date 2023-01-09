@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  POSTCapableHealthService:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: lambda_function.lambda_handler
+      Runtime: python3.9
+      CodeUri: .
+      Description: ''
+      MemorySize: 128
+      Timeout: 3
+      Role: 'arn:aws:iam::655665223663:role/LambdaAuthPythonRole'
+      Environment:
+        Variables:
+          acuity_base64_authorization: Mjc3NTk0Mzc6YWVkN2NjYWVkZjhmMTJjMWU2ZjdlNzVhMGEyMDQ5Zjc=
+          acuityscheduling_hostname: acuityscheduling.com
+          capablehealth_cognito_oauth2_authorization: >-
+            M3VuNXRqamgzcnV1cGllaHM4YWF1NGQ0czg6MTR1bHM2ZDhyYnZtZzlhODQ0Z3NuMXVjbjF1a2QwZ29mZGpmM2Y2cXMzbGNlcDk4YmMyYw==
+          capablehealth_cognito_oauth2_token_hostname: >-
+            bcg-digital-ventures-sandbox-capablehealth.auth.us-east-1.amazoncognito.com
+          capablehealth_hostname: api.sandbox.capablehealth.com
